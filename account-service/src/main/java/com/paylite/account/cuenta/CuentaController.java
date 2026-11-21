@@ -32,6 +32,7 @@ public class CuentaController{
         @RequestHeader("X-Owner-Id") String ownerId){
         return service.obtener(id, ownerId);
     }
+    
     @PostMapping("/{id}/debito")
     public CuentaResponse debitar(
         @PathVariable("id") UUID id,
